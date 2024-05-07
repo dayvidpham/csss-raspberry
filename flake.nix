@@ -31,15 +31,6 @@
             inherit nativeBuildInputs;
             buildInputs = nativeBuildInputs;
 
-            installPhase = ''
-              runHook preInstall
-            
-              mkdir -p $out
-              cp -r ./dist $out/
-
-              runHook postInstall
-            '';
-
             # The prepack script runs the build script, which we'd rather do in the build phase.
             npmPackFlags = [ "--ignore-scripts" ];
             npmDepsHash = "sha256-zbxANKssh26Oqk4IcojsX86sQTI9fJJky9cK816ylko=";

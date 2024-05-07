@@ -7,7 +7,8 @@
   "private": true,
   "files": [
     "lib",
-    ".babelrc"
+    ".babelrc",
+    "dist"
   ],
   "main": "dist/index.js",
   "dependencies": {
